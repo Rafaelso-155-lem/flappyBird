@@ -7,21 +7,21 @@ class Partida:
     def __init__(self, tela):
         self.tela = tela
 
-        # Estado inicial do jogo → começa no menu
+        # Estado inicial para poder começar o jogo
         self.estado = "menu"
 
-        # Jogador
+        # tela do jogador
         self.jogador = Jogador(tela, 100, 100)
 
         # Lista de canos
         self.canos = []
 
-        # Pontos
+        # contador dos pontos para o jogo
         self.pontosValor = 0
         self.contador = 0
         self.pontosTexto = Texto(tela, str(self.pontosValor), 10, 10, (255,255,255), 30)
 
-        # Botão do menu
+        # Botão que aparece no menu
         self.botaoJogar = Botao(
             tela,
             tela.get_width()//2 - 80,
