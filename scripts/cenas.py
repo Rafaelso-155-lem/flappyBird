@@ -127,12 +127,5 @@ class Partida:
         # jogador
         self.jogador.desenhar()
 
-        # chão
-        pygame.draw.rect(
-            self.tela,
-            (222,184,135),   # cor do chão
-            (0, self.base_y, self.tela.get_width(), 50)
-        )
-
         # pontos
         self.pontosTexto.desenhar()

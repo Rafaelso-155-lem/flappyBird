@@ -17,10 +17,12 @@ while True:
         if evento.type == pygame.QUIT:
             pygame.quit()
             sys.exit()
-        if evento.type == pygame.MOUSEBUTTONDOWN:
-            if partida.estado == "partida":
+        if evento.type == pygame.KEYDOWN:
+         if partida.estado == "partida":
+            if evento.key in (pygame.K_SPACE, pygame.K_UP):
                 partida.jogador.flap()
-        partida.tratar_evento(evento)
+
+    partida.tratar_evento(evento)
     partida.atualizar()
     partida.desenhar()
     pygame.display.update()
